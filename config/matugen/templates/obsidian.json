@@ -1,0 +1,7 @@
+{
+  "baseFontSize": 20,
+  "monospaceFontFamily": "Courier",
+  "cssTheme": "Retroma",
+  "accentColor": "{{ colors.primary.dark.hex }}"
+
+}

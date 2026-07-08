@@ -1,0 +1,58 @@
+// ────────────── Window Rules ──────────────
+include "study.kdl"
+include "system.kdl"
+include "chill.kdl"
+workspace "scratch"
+
+	blur {
+		on
+		passes 1
+		offset 1
+		noise 0.27
+	}
+		window-rule {
+				geometry-corner-radius 15 
+				clip-to-geometry true	
+				opacity 0.35
+				background-effect {
+						blur true
+						saturation 0
+				}
+		}
+		window-rule {
+				match is-focused=true
+				opacity 0.80
+				background-effect {
+						blur false
+						saturation 2
+						
+				}
+		}
+
+		layer-rule {
+				match namespace="^awww-daemon$"
+				place-within-backdrop true
+		}
+
+		layer-rule {
+				match namespace="wallpaper"
+		}
+		window-rule {
+				match app-id=r#"^special*"#
+				open-on-workspace "scratch"
+				default-column-width { proportion 0.5; }
+		}
+		window-rule {
+				match app-id=r#"Nsxiv"# 
+				match app-id=r#"obsidian"# 
+				match title="Picture-in-Picture"
+
+				open-floating true
+				background-effect {
+						blur false 
+						saturation 0
+				}
+				opacity 1.0
+		}
+
+

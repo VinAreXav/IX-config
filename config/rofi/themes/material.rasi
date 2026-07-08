@@ -1,0 +1,90 @@
+@import "././colors.rasi"
+configuration {
+		font: "JetBrainsMono Nerd Font 13";
+}
+window {
+    orientation: vertical;
+    border-radius: 2;
+    spacing: 10;
+    width: 25% ;
+}
+
+mainbox {
+	children: [inputbar, listview];
+    background-color: transparent;
+	spacing: 10px;
+	padding: 0 0 0 0;
+}
+
+inputbar {
+	padding: 10px 10px;
+	children: [entry];
+		border:3;
+		border-color: @base03;
+		transparency: "real";
+		background-color: @back;
+
+}
+
+listview {
+		dynamic: true;
+		background-color: @back;
+		transparency: "real";
+		margin: 1 0 1 0;
+		columns: 2;
+		lines: 15;
+		fixed-height: false;
+		fixed-lines: true;
+		border: 3;
+		border-color: @base03;
+}
+element columns {
+		spacing: 10;
+}
+entry {
+		padding: 1 5 1 5;
+		text-color: @base03;
+		hide-cursor-on-empty: true;
+	}
+
+button selected {
+	background-color: @base02;
+}
+
+
+element {
+    spacing: 10px;
+	highlight: bold;
+	children: [element-text];
+}
+
+element-text {
+		padding: 10px 10px;
+/*		horizontal-align: 0.5; */
+		text-color	     : inherit;
+		foreground-color : inherit;
+}
+
+
+element normal {
+	background-color: transparent;
+}
+
+element selected {
+		border: 3;
+		border-color: @base03;
+		background-color: @base03;
+		text-color: @base0B;
+}
+
+element normal normal, element alternate normal {
+	text-color: @base0C;
+}
+
+element normal urgent, element selected urgent, element alternate urgent {
+	text-color: @base03;
+}
+
+element normal active, element selected active, element alternate active {
+	text-color: @base0B;
+}

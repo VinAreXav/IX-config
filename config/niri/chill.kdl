@@ -1,0 +1,31 @@
+workspace "chill.kdl"
+		window-rule {
+				match app-id=r#"FreeTube"# 
+				default-column-width { proportion 0.30; }
+				open-floating true
+				default-floating-position x=50 y=50 relative-to="top-left"
+				opacity 1.0
+				open-focused true
+		}
+		
+		window-rule {
+				match app-id=r#"zenlesszonezero.exe"#
+				match app-id=r#"genshinimpact.exe"#
+				match app-id=r#"starrail.exe"#
+				match app-id=r#"steam_app_0"#
+				match title="Reverse: 1999"
+				open-maximized true
+				open-focused true
+				open-on-workspace "chill"
+		}
+		window-rule {
+				match app-id=r#"moe.launcher.the-honkers-railway-launcher"#
+				match app-id=r#"moe.launcher.an-anime-game-launcher"#
+				match app-id=r#"moe.launcher.sleepy-launcher"#
+				match app-id=r#"heroic"#
+				match app-id=r#"steam"#
+				open-on-workspace "chill"
+				open-focused true
+				default-column-width { proportion 0.5; }
+		}
+		

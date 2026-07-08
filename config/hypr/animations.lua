@@ -1,0 +1,36 @@
+-- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
+
+hl.curve("easeOutQuint",   { type = "bezier", points = { {0.23, 1},    {0.32, 1}    } })
+hl.curve("easeInOutCubic", { type = "bezier", points = { {0.65, 0.05}, {0.36, 1}    } })
+hl.curve("linear",         { type = "bezier", points = { {0, 0},       {1, 1}       } })
+hl.curve("almostLinear",   { type = "bezier", points = { {0.5, 0.5},   {0.75, 1}    } })
+hl.curve("quick",          { type = "bezier", points = { {0.15, 0},    {0.1, 1}     } })
+
+hl.animation({ leaf = "global",        enabled = true,  speed = 2,   bezier = "default" })
+hl.animation({ leaf = "border",        enabled = true,  speed = 5.39, bezier = "easeOutQuint" })
+
+hl.animation({ leaf = "windows",       enabled = true,  speed = 1.79, bezier = "quick" })
+hl.animation({ leaf = "windowsIn",     enabled = true,  speed = 1,  bezier = "quick",         style = "popin 67%" })
+hl.animation({ leaf = "windowsOut",    enabled = false,  speed = 0.2, bezier = "linear",       style = "popin 97%" })
+
+hl.animation({ leaf = "fadeIn",        enabled = true,  speed = 1.73, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeOut",       enabled = true,  speed = 1.46, bezier = "almostLinear" })
+hl.animation({ leaf = "fade",          enabled = true,  speed = 3.03, bezier = "quick" })
+
+hl.animation({ leaf = "layers",        enabled = true,  speed = 3.81, bezier = "easeOutQuint" })
+hl.animation({ leaf = "layersIn",      enabled = true,  speed = 4,    bezier = "easeOutQuint", style = "fade" })
+hl.animation({ leaf = "layersOut",     enabled = true,  speed = 1.5,  bezier = "linear",       style = "fade" })
+
+hl.animation({ leaf = "fadeLayersIn",  enabled = true,  speed = 1.79, bezier = "almostLinear" })
+hl.animation({ leaf = "fadeLayersOut", enabled = true,  speed = 1.39, bezier = "almostLinear" })
+
+hl.animation({ leaf = "workspaces",    enabled = true,  speed = 1, bezier = "almostLinear", style = "slidevertfade right" })
+hl.animation({ leaf = "workspacesIn",  enabled = true,  speed = 5, bezier = "easeOutQuint", style = "slidevert left" })
+hl.animation({ leaf = "workspacesOut", enabled = true,  speed = 3.5, bezier = "easeInOutCubic", style = "slidevertfade left" })
+hl.animation({ leaf = "specialWorkspace", enabled = true, speed = 1.0, bezier = "almostLinear", style = "slidevertfade bottom"})
+hl.animation({ leaf = "specialWorkspaceIn", enabled = true, speed = 2.8, bezier = "easeOutQuint", style = "slidevert top"})
+hl.animation({ leaf = "specialWorkspaceOut", enabled = true, speed = 2.8, bezier = "easeInOutCubic", style = "slide top"})
+
+hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 1,    bezier = "quick" })
+
+

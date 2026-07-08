@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+WORKSPACES=/home/xavier/Desktop/meow/qof/wallpaper-per-workspace
+SDDM=/home/xavier/Desktop/conesque/sddm/wal.jpg
+CACHE_SDDM=/home/xavier/Desktop/meow/colors/qml-sddm.py
+WAL_SDDM=/home/xavier/Desktop/meow/colors/update-background
+
+UPDATE=/lien/Desktop/meow/colors/pywal16
+[ "$NSXIV_USING_NULL" = 1 ] && DELIM='\0' || DELIM='\n'
+
+while read file
+do
+	case "$1" in
+		"w") echo "$file" > /lien/Desktop/meow/matugen/background.txt
+		 $UPDATE
+		;;
+		"e") /lien/Desktop/meow/colors/gtk/oomox-gtk & 
+##		cp $file $SDDM
+###		python3 $CACHE_SDDM
+###		sudo $WAL_SDDM
+				;;
+esac
+done

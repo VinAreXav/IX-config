@@ -1,0 +1,15 @@
+{
+    "cursor": "{{colors.on_tertiary_container.default.hex}}",
+    "number": "{{colors.primary.default.hex}}",
+    "parens": "{{colors.on_secondary_container.default.hex}}",
+    "result": "{{colors.secondary.default.hex}}",
+    "comment": "{{colors.surface_variant.default.hex}}",
+    "matched": "{{colors.inverse_primary.default.hex}}",
+    "function": "{{colors.on_primary.default.hex}}",
+    "operator": "{{colors.secondary_container.default.hex}}",
+    "variable": "{{colors.on_primary_container.default.hex}}",
+    "scrollbar": "{{colors.secondary_container.default.hex}}",
+    "separator": "{{colors.secondary_container.default.hex}}",
+    "background": "{{colors.secondary.default.hex}}",
+    "editorbackground": "{{colors.secondary.default.hex}}"
+}

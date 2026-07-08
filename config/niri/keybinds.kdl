@@ -1,0 +1,107 @@
+// ────────────── Keybindings ──────────────
+
+screenshot-path "~/Desktop/haven/screenshot/%Y-%m-%d.png"
+binds {
+    Mod+Shift+Escape                     { show-hotkey-overlay; }
+	
+	Alt+F1 { spawn "chamel" "toggle"; }
+	Alt+F2 { spawn "chamel" "undo"; }
+	Alt+F3 { spawn "chamel" "clear"; }
+    Alt+F4 { spawn "kitty" "-e" "peaclock"; }
+
+	// ─── Applications ───
+	Mod+E	{ spawn "nemo"; }
+	Mod+D	repeat=false	hotkey-overlay-title="app launcher: " { spawn "rofi" "-modi" "drun" "-show" "drun" ; }
+	
+	Mod+Q	{ spawn "kitty" ; }
+	Mod+N	{ spawn "kitty" "--working-directory" "/" "-e" "nvim"; }
+	Alt+I	repeat=false	{spawn "~/Desktop/meow/colors/walmenu.sh"; }
+	Mod+R { spawn "PureRef"; }
+    
+//	Mod+B	{ spawn "flatpak" "run" "io.gitlab.librewolf-community"; }
+    Mod+B	{ spawn "qutebrowser"; }
+//  MOD+M repeat=false	{ spawn "dex" "/usr/share/applications/spotify-adblock.desktop"; }
+	Ctrl+Alt+0 { spawn "pavucontrol"; }
+	Ctrl+Alt+1 { spawn "/lien/Desktop/meow/niri/custom/niri-scripts/niri-floating-sidebar.sh" "toggle"; }
+	Ctrl+Alt+2 { spawn "/lien/Desktop/meow/niri/custom/niri-scripts/niri-floating-sidebar.sh" "hide";}
+	Ctrl+Alt+3 { spawn "/lien/Desktop/meow/niri/custom/niri-scripts/auto-layout.sh";}
+	Ctrl+Alt+4 { spawn "/lien/Desktop/meow/niri/custom/niri-scripts/set-master.sh";}
+    
+	Mod+W { spawn "obsidian";}
+	
+	// ─── Window Movement and Focus ───
+    Mod+C              { close-window; }
+	Mod+O 			   { toggle-window-rule-opacity; }
+    Mod+H 			   { focus-column-left; }
+    Mod+L 			   { focus-column-right; }
+	Mod+K              { focus-window-up; }
+  	Mod+J              { focus-window-down; }
+	
+    Alt+H              { move-column-left; }
+    Alt+L              { move-column-right; }
+	Alt+K              { move-window-up; }
+	Alt+J              { move-window-down; }
+
+	// ─── Workspace Switching ───
+
+    Mod+1                               { focus-workspace 1; }
+	Mod+2                               { focus-workspace 2; }
+	Mod+3                               { focus-workspace 3; }
+    Mod+4                               { focus-workspace 4; }
+	Mod+9								{ focus-workspace-down; }
+    Mod+0								{ focus-workspace-up; }
+    //MOD+8                               { focus-workspace 8; }
+	//MOD+9                               { focus-workspace 9; }
+
+    Alt+1                          { move-column-to-workspace 1; }
+    Alt+2                          { move-column-to-workspace 2; }
+    Alt+3                          { move-column-to-workspace 3; }
+    Alt+4                          { move-column-to-workspace 4; }
+    Alt+9                          { move-column-to-workspace-down; }
+    Alt+0                          { move-column-to-workspace-up; }
+	//CTRL+8                          { move-column-to-workspace 8; }
+    //CTRL+9                          { move-column-to-workspace 9; }
+	
+	// MOD+TAB                             { focus-workspace-previous; }
+
+    // ─── Layout Controls ───
+//	Mod+C                         	{ center-column; }
+//	Mod+Shift+C                     { center-visible-columns; }
+   	Mod+Alt+L						{ set-column-width "+10%"; }
+    Mod+Alt+H						{ set-column-width "-10%"; }
+	Mod+Alt+K						{ set-window-height "-10%"; }
+    Mod+Alt+J						{ set-window-height "+10%"; }
+
+    // ─── Modes ───
+	Alt+V							{ toggle-window-floating; }
+    Alt+Shift+F						{ fullscreen-window; }
+    Alt+F						    { expand-column-to-available-width; }
+	Alt+Shift+T						{ toggle-column-tabbed-display; }
+	Alt+P 							{ spawn "niri-float-sticky" "-ipc" "toggle_sticky"; }
+    // ─── Screenshots ───
+	Print 							{ screenshot; }
+	Alt+Print       				{ screenshot-window; }
+	Alt+Ctrl+Print					{ screenshot-screen; }
+
+    // ─── Emergency Escape Key ───
+    // MOD+ESCAPE                          allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+
+    // ─── Exit / Power ───
+    Ctrl+Alt+Delete                 { quit; }
+	Mod+Escape                      { power-off-monitors; }
+	Alt+Q              repeat=false { toggle-overview; }
+
+    // ─── Audio Controls ───
+    // The allow-when-locked=true property makes them work even when the session is locked.
+    XF86AudioRaiseVolume                allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioLowerVolume                allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioMute                       allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioMicMute                    allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+    XF86AudioNext                       allow-when-locked=true { spawn "playerctl" "next"; }
+    XF86AudioPause                      allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioPlay                       allow-when-locked=true { spawn "playerctl" "play-pause"; }
+    XF86AudioPrev                       allow-when-locked=true { spawn "playerctl" "previous"; }
+
+}
+
+

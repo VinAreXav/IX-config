@@ -1,0 +1,16 @@
+//just keybinds
+include "keybinds.kdl"
+//layout with include to workspaces
+include "layout.kdl"
+//windowrules that are not connected to other workspaces
+include "windowrules.kdl"
+//input output and env
+include "inoutput-env.kdl"
+//animations!
+include "animations.kdl"
+//startup aplications
+include "startup.kdl"
+//gestures, recent windows and others in the future
+include "other.kdl"
+
+

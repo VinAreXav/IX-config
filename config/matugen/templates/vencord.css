@@ -1,0 +1,6 @@
+.theme-light {
+		--neobrutal-color-1: {{colors.secondary_container.default.hex}};
+		--neobrutal-color-2: {{colors.on_primary.default.hex}};
+		--neobrutal-color-text: {{colors.on_tertiary_container.default.hex}};
+		--nebrutal-color-accent: {{colors.tertiary_container.default.hex}};
+}

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+back="$(cat $HOME/Desktop/meow/matugen/background.txt)"
+pkill swaybg
+swaybg -m fill -i "$back" &
+matugen image -t scheme-fruit-salad --source-color-index 0 -m dark --contrast -1 -r gaussian -v "$back" &  
+# hyprctl hyprpaper wallpaper 'eDP-1, $back'
+# awww img --transition-type wipe --transition-duration 1.0 --filter CatmullRom --transition-fps 78 --transition-angle 180 --transition-bezier .97,.03,.02,.98  $file 
+# killall hyprpaper
+# pywalfox update 
+while [ ! -f ~/.cache/wal/krita.colors ]; do
+	sleep 0.1
+done
+# hyprpaper &
+

@@ -1,0 +1,39 @@
+[config.wallpaper]
+set = false
+command = "swaybg -m fill -i {{ image }}"
+
+[templates.kitty]
+input_path = './templates/kitty-colors.conf'
+output_path = './../kitty/colors.conf'
+
+[templates.obsidian]
+input_path = './templates/obsidian.json'
+output_path = '/home/xavier/Desktop/bale/.obsidian/appearance.json'
+
+#[templates.gtk]
+#input_path = './templates/oomox-gtk'
+#output_path = './../colors/gtk/theme-colors'
+
+#[templates.folders]
+#input_path = './templates/numix-folders'
+#output_path = './../colors/gtk/folder-colors'
+
+[templates.nvim]
+input_path = './templates/colors.vim'
+output_path = '~/.cache/wal/colors-wal.vim'
+
+[templates.rofi]
+input_path = './templates/rofi.rasi'
+output_path = './../rofi/colors.rasi'
+
+[templates.vencord]
+input_path = './templates/vencord.css'
+output_path = '~/.config/vesktop/settings/quickCss.css'
+
+[templates.qutebrowser]
+input_path = './templates/qutebrowser.json'
+output_path = './../qutebrowser/qutebrowser.json'
+
+[templates.quickshell]
+input_path = './templates/quickshell.json'
+output_path = './quickshell.json'
