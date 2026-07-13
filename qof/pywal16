@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-back="$(cat $HOME/Desktop/meow/matugen/background.txt)"
+back="$(cat $HOME/IX-config/config/matugen/background.txt)"
 pkill swaybg
 swaybg -m fill -i "$back" &
 matugen image -t scheme-fruit-salad --source-color-index 0 -m dark --contrast -1 -r gaussian -v "$back" &  

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 
 home = str(Path.home())
-with open(f'{home}/Desktop/meow/qutebrowser/qutebrowser.json', 'r') as file:
+with open(f'{home}/.config/qutebrowser/qutebrowser.json', 'r') as file:
     colorjson = json.load(file)
 
 

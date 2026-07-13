@@ -51,9 +51,9 @@ let
 	cursorTheme.name = "Catpuccin Latte Dark Cursor";
 	theme.name = "Plata-Lumine-Compact";
 	theme.package = pkgs.plata-theme;
-	iconTheme.name = "Catpuccin-Papirus-Folders";
-	iconTheme.package = pkgs.catppuccin-papirus-folders;
-	colorScheme = "light";
+#	iconTheme.name = "Catpuccin ";
+#	iconTheme.package = pkgs.catppuccin-papirus-folders;
+#	colorScheme = "light";
 	font = {
 		package = pkgs.nerd-fonts.jetbrains-mono;
 		name = "JetBrainsMono Nerd Font";

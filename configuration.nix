@@ -58,6 +58,7 @@
     	};
   };
   services = {
+  	input-remapper.enable = true;
   	udisks2.enable = true;
 	printing.enable = true;
 	libinput.enable = true;
@@ -97,6 +98,7 @@
 
   environment.localBinInPath = true;
   environment.systemPackages = with pkgs; [
+  input-remapper
 	wget
 	swaybg
 	nemo
@@ -128,7 +130,7 @@
 	inkscape
 	libreoffice
 	wine64Packages.stagingFull
-	bottles-unwrapped
+	(bottles.override { removeWarningPopup = true; })
 	winetricks
 	brightnessctl
 	ayugram-desktop
@@ -150,19 +152,14 @@
 	lua5_4_compat
 	htop
 	obs-studio
-#	pureref
+	#pureref
 	jq
 	chameleos
 	pciutils
 	libnotify
 	figma-linux
 	nix-prefetch
-	gst_all_1.gstreamer
-	gst_all_1.gst-plugins-base
-	gst_all_1.gst-plugins-good
-	gst_all_1.gst-plugins-ugly
-	gst_all_1.gst-plugins-bad
-
+	nsxiv
 ];
 
   fonts = {
@@ -196,9 +193,14 @@
 	steam.enable = true;
 	mtr.enable = true;
 	nix-ld.enable = true;
-  	firefox.enable = true;
+  	#firefox.enable = true;
   };
- 
+   #virtualisation.virtualbox.host.enable = true;
+   #users.extraGroups.vboxusers.members = [ "xavier" ];
+   #virtualisation.virtualbox.host.enableExtensionPack = true;
+   #virtualisation.virtualbox.guest.enable = true;
+   #virtualisation.virtualbox.guest.dragAndDrop = true;
+
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
