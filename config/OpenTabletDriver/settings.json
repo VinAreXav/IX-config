@@ -212,16 +212,16 @@
       "AbsoluteModeSettings": {
         "Display": {
           "Width": 1920.0,
-          "Height": 1080.0,
+          "Height": 1080.14,
           "X": 960.0,
-          "Y": 1740.0,
+          "Y": 540.07,
           "Rotation": 0.0
         },
         "Tablet": {
           "Width": 476.76,
           "Height": 268.225,
           "X": 238.38,
-          "Y": 134.1125,
+          "Y": 134.11249,
           "Rotation": 0.0
         },
         "EnableClipping": true,
@@ -259,11 +259,11 @@
         },
         "PenButtons": [
           {
-            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Path": "OpenTabletDriver.Desktop.Binding.MultiKeyBinding",
             "Settings": [
               {
-                "Property": "Key",
-                "Value": "C"
+                "Property": "Keys",
+                "Value": "Control+Z"
               }
             ],
             "Enable": true

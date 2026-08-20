@@ -2,7 +2,7 @@
 hl.config({
     general = {
         gaps_in  = 5,
-		gaps_out = 15,
+		gaps_out = 5,
 
         border_size = 0,
 
@@ -21,8 +21,8 @@ hl.config({
         rounding       = 10,
         rounding_power = 2,
 
-        active_opacity   = 0.97,
-        inactive_opacity = 0.70,
+        active_opacity   = 0.87,
+        inactive_opacity = 0.40,
 
         shadow = {
             enabled      = true,
@@ -33,9 +33,9 @@ hl.config({
 
         blur = {
             enabled   = true,
-            size      = 20,
+            size      = 5,
             passes    = 1,
-            vibrancy  = 1,
+            vibrancy  = 5,
 			ignore_opacity = true,
 			new_optimizations = true,
 			xray = false

@@ -11,7 +11,7 @@ while read file
 do
 	case "$1" in
 		"w") echo "$file" > /home/xavier/IX-config/config/matugen/background.txt
-		 $UPDATE
+		 $UPDATE &
 		;;
 		"e") /home/xavier/IX-config/qof/oomox-gtk & 
 ##		cp $file $SDDM

@@ -8,13 +8,13 @@ menu() {
         exit 1
     fi
 
-    FOLDER=$(ls ~/Desktop/conesque/refs/ | rofi -dmenu -p "choose your folder" )
+    FOLDER=$(ls ~/Desktop/conesque/wallpapers/ | rofi -dmenu -p "choose your folder" )
     if [[ -z "$FOLDER" ]]; then
         echo "folder/image wasnt selected or something went wrong, quitting..."
         exit 0
     fi
 
-	CHOICE=$(nsxiv -otb ~/Desktop/conesque/refs/"$FOLDER"/*)
+	CHOICE=$(nsxiv -otb ~/Desktop/conesque/wallpapers/"$FOLDER"/*)
 
     if [[ -n "$CHOICE" ]]; then
 		echo "image was selected!"	

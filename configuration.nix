@@ -152,7 +152,7 @@
 	lua5_4_compat
 	htop
 	obs-studio
-	#pureref
+#pureref
 	jq
 	chameleos
 	pciutils
@@ -160,8 +160,10 @@
 	figma-linux
 	nix-prefetch
 	nsxiv
+	openutau
+	librewolf-bin
+	wpgtk
 ];
-
   fonts = {
     fontconfig.enable = true;
     enableDefaultPackages = true;
@@ -193,6 +195,7 @@
 	steam.enable = true;
 	mtr.enable = true;
 	nix-ld.enable = true;
+	dconf.enable = true;
   	#firefox.enable = true;
   };
    #virtualisation.virtualbox.host.enable = true;

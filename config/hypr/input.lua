@@ -24,6 +24,7 @@ hl.gesture({
 
 hl.device({
     name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+    sensitivity = -1,
+	accel_profile = flat
 })
 

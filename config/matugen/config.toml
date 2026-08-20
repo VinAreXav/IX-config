@@ -4,7 +4,7 @@ command = "swaybg -m fill -i {{ image }}"
 
 [templates.kitty]
 input_path = './templates/kitty-colors.conf'
-output_path = './../kitty/colors.conf'
+output_path = './generated/colors-kitty.conf'
 
 [templates.obsidian]
 input_path = './templates/obsidian.json'
@@ -24,7 +24,7 @@ output_path = '~/.cache/wal/colors-wal.vim'
 
 [templates.rofi]
 input_path = './templates/rofi.rasi'
-output_path = './../rofi/colors.rasi'
+output_path = './generated/colors-rofi.rasi'
 
 [templates.vencord]
 input_path = './templates/vencord.css'
@@ -36,4 +36,8 @@ output_path = './../qutebrowser/qutebrowser.json'
 
 [templates.quickshell]
 input_path = './templates/quickshell.json'
-output_path = './quickshell.json'
+output_path = './generated/quickshell.json'
+
+[templates.firefox]
+input_path = './templates/firefox-colors.css'
+output_path = './generated/firefox-colors.css'

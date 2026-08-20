@@ -1,5 +1,5 @@
 hl.on("hyprland.start", function () 
-   hl.exec_cmd("/lien/Desktop/meow/colors/pywal16")
+   hl.exec_cmd("~/IX-config/qof/pywal16 &")
    hl.exec_cmd("brightnessctl set 100%")
    hl.exec_cmd(notes)
    hl.exec_cmd("nm-applet")

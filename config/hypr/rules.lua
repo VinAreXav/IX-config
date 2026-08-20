@@ -81,6 +81,16 @@ hl.window_rule ({
 				fullscreen = true,
 				workspace = "special:trinkets",
 })
+hl.window_rule ({
+				name = "quick access",
+				match = {
+						class = "clipstudiopaint.exe",
+						title = "Quick Access"
+				},
+				opaque = true,
+				pin = true,
+				float = true
+})
 
 hl.window_rule({
 		name = "csp",
