@@ -1,0 +1,14 @@
+{
+  "Name": "Monitor Toggle",
+  "Owner": "Kuuuube",
+  "Description": "Bindings for switching between monitors.",
+  "PluginVersion": "0.0.4.0",
+  "SupportedDriverVersion": "0.6.3.0",
+  "MaxSupportedDriverVersion": null,
+  "RepositoryUrl": "https://github.com/Kuuuube/Monitor_Toggle",
+  "DownloadUrl": "https://github.com/Kuuuube/Monitor_Toggle/releases/download/0.0.4/0.0.4_release_monitor_toggle.zip",
+  "CompressionFormat": "zip",
+  "SHA256": "dd88e055e56dd8f938b90820e5277dbb8c0698d2656e9450bb9a811b33134bba",
+  "WikiUrl": "https://github.com/Kuuuube/Monitor_Toggle/blob/main/README.md",
+  "LicenseIdentifier": "GPL-3.0-only"
+}

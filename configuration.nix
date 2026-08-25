@@ -163,6 +163,10 @@
 	openutau
 	librewolf-bin
 	wpgtk
+	gst_all_1.gst-plugins-bad
+	gst_all_1.gst-plugins-good
+	gst_all_1.gst-plugins-ugly
+	gst_all_1.gst-plugins-base
 ];
   fonts = {
     fontconfig.enable = true;
