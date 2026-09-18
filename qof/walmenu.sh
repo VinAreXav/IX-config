@@ -15,7 +15,6 @@ menu() {
     fi
 
 	CHOICE=$(nsxiv -otb ~/Desktop/conesque/wallpapers/"$FOLDER"/*)
-
     if [[ -n "$CHOICE" ]]; then
 		echo "image was selected!"	
 		break

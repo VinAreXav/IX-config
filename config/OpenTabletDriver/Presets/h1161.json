@@ -69,7 +69,7 @@
             "Settings": [
               {
                 "Property": "Key",
-                "Value": "LeftAlt"
+                "Value": "C"
               }
             ],
             "Enable": true
@@ -101,17 +101,7 @@
             "Settings": [
               {
                 "Property": "Key",
-                "Value": "C"
-              }
-            ],
-            "Enable": true
-          },
-          {
-            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-            "Settings": [
-              {
-                "Property": "Key",
-                "Value": "X"
+                "Value": "RightAlt"
               }
             ],
             "Enable": true
@@ -121,17 +111,7 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Alt+M"
-              }
-            ],
-            "Enable": true
-          },
-          {
-            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-            "Settings": [
-              {
-                "Property": "Key",
-                "Value": "Space"
+                "Value": "Control+T"
               }
             ],
             "Enable": true
@@ -141,7 +121,27 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Shift+Space"
+                "Value": "Control+E"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "P"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "G"
               }
             ],
             "Enable": true
@@ -171,7 +171,7 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Control+T"
+                "Value": "Alt+M"
               }
             ],
             "Enable": true

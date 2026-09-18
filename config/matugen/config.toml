@@ -3,12 +3,12 @@ set = false
 command = "swaybg -m fill -i {{ image }}"
 
 [templates.kitty]
-input_path = './templates/kitty-colors.conf'
+input_path = './templates/kitty.conf'
 output_path = './generated/colors-kitty.conf'
 
 [templates.obsidian]
 input_path = './templates/obsidian.json'
-output_path = '/home/xavier/Desktop/bale/.obsidian/appearance.json'
+output_path = '/home/xavier/Desktop/havenbale/.obsidian/appearance.json'
 
 #[templates.gtk]
 #input_path = './templates/oomox-gtk'
@@ -41,3 +41,7 @@ output_path = './generated/quickshell.json'
 [templates.firefox]
 input_path = './templates/firefox-colors.css'
 output_path = './generated/firefox-colors.css'
+
+[templates.hyprland]
+input_path = './templates/hyprland-colors.lua'
+output_path = './../hypr/borders.lua'

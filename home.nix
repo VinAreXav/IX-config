@@ -49,8 +49,8 @@ let
 	enable = true;
 	cursorTheme.package = pkgs.catppuccin-cursors.latteDark;
 	cursorTheme.name = "Catpuccin Latte Dark Cursor";
-	theme.name = "Plata-Lumine-Compact";
-	theme.package = pkgs.plata-theme;
+	theme.name = "Arc Theme";
+	theme.package = pkgs.arc-theme;
 #	iconTheme.name = "Catpuccin ";
 #	iconTheme.package = pkgs.catppuccin-papirus-folders;
 #	colorScheme = "light";

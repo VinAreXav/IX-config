@@ -8,27 +8,21 @@
         "Settings": [],
         "Enable": true
       },
-      "Filters": [
-        {
-          "Path": "monitor_toggle.monitor_toggle",
-          "Settings": [],
-          "Enable": false
-        }
-      ],
+      "Filters": [],
       "AbsoluteModeSettings": {
         "Display": {
-          "Width": 1920.0,
-          "Height": 1080.0,
-          "X": 960.0,
-          "Y": 540.0,
+          "Width": 1200.0,
+          "Height": 1920.0,
+          "X": 600.0,
+          "Y": 960.0,
           "Rotation": 0.0
         },
         "Tablet": {
-          "Width": 279.4,
-          "Height": 174.625,
-          "X": 139.7,
-          "Y": 87.3125,
-          "Rotation": 0.0
+          "Width": 174.625,
+          "Height": 279.4,
+          "X": 139.69998,
+          "Y": 87.31253,
+          "Rotation": 90.0
         },
         "EnableClipping": true,
         "EnableAreaLimiting": false,
@@ -69,7 +63,7 @@
             "Settings": [
               {
                 "Property": "Key",
-                "Value": "LeftAlt"
+                "Value": "C"
               }
             ],
             "Enable": true
@@ -101,17 +95,7 @@
             "Settings": [
               {
                 "Property": "Key",
-                "Value": "C"
-              }
-            ],
-            "Enable": true
-          },
-          {
-            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-            "Settings": [
-              {
-                "Property": "Key",
-                "Value": "X"
+                "Value": "RightAlt"
               }
             ],
             "Enable": true
@@ -121,17 +105,7 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Alt+M"
-              }
-            ],
-            "Enable": true
-          },
-          {
-            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
-            "Settings": [
-              {
-                "Property": "Key",
-                "Value": "Space"
+                "Value": "Control+T"
               }
             ],
             "Enable": true
@@ -141,7 +115,27 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Shift+Space"
+                "Value": "Control+E"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "P"
+              }
+            ],
+            "Enable": true
+          },
+          {
+            "Path": "OpenTabletDriver.Desktop.Binding.KeyBinding",
+            "Settings": [
+              {
+                "Property": "Key",
+                "Value": "G"
               }
             ],
             "Enable": true
@@ -171,7 +165,7 @@
             "Settings": [
               {
                 "Property": "Keys",
-                "Value": "Control+T"
+                "Value": "Alt+M"
               }
             ],
             "Enable": true
@@ -217,7 +211,7 @@
         {
           "Path": "monitor_toggle.monitor_toggle",
           "Settings": [],
-          "Enable": true
+          "Enable": false
         },
         {
           "Path": "tablet_calibration.tablet_calibration_stretch_area",

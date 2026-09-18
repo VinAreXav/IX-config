@@ -1,20 +1,19 @@
 
 local mainMod = "SUPER"
 -- applications
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(menu),{repeating = false})
-hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty --working-directory / nvim"))
-hl.bind(mainMod .. " + T", function()
-		hl.exec_cmd(clock, clock_wr)
-end)
+hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu),{repeating = false})
 
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("PureRef"))
+--hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty --working-directory / nvim"))
+-- hl.bind(mainMod .. " + T", function()
+--		hl.exec_cmd(clock, clock_wr)
+-- end)
 
 -- scripts
-hl.bind("ALT + I", hl.dsp.exec_cmd(walmenu))
+hl.bind(mainMod .. "+ I", hl.dsp.exec_cmd(walmenu))
 
 -- system applications
-hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("hyprshot -m window"))
 hl.bind("PRINT", hl.dsp.exec_cmd("hyprshot -m region"))
 
@@ -28,15 +27,15 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pin({ action = "toggle" }))
 hl.bind(mainMod .. " + U", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + M", hl.dsp.layout("togglesplit"))
 
-hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
-hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
-hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
-hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + A", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + W", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + S", hl.dsp.focus({ direction = "down" }))
 
-hl.bind("ALT + H", hl.dsp.window.move({ direction = "left" }))
-hl.bind("ALT + L", hl.dsp.window.move({ direction = "right" }))
-hl.bind("ALT + K", hl.dsp.window.move({ direction = "up" }))
-hl.bind("ALT + J", hl.dsp.window.move({ direction = "down" }))
+hl.bind(mainMod .. "+ SHIFT + A", hl.dsp.window.move({ direction = "left" }))
+hl.bind(mainMod .. "+ SHIFT + D", hl.dsp.window.move({ direction = "right" }))
+hl.bind(mainMod .. "+ SHIFT + W", hl.dsp.window.move({ direction = "up" }))
+hl.bind(mainMod .. "+ SHIFT + S", hl.dsp.window.move({ direction = "down" }))
 
 
 for i = 1, 10 do
@@ -47,9 +46,10 @@ end
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
-hl.bind(mainMod .. " + A",	hl.dsp.workspace.toggle_special("trinkets"))
-hl.bind(mainMod .. " + SHIFT + S",	hl.dsp.window.move({ workspace = "special:special" }))
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ workspace = "special:trinkets"}))
+hl.bind(mainMod .. " + Q",	hl.dsp.workspace.toggle_special("trinkets"))
+hl.bind(mainMod .. " + E",	hl.dsp.workspace.toggle_special("special"))
+hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.window.move({ workspace = "special:special" }))
+hl.bind(mainMod .. " + SHIFT + E", hl.dsp.window.move({ workspace = "special:trinkets"}))
 
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })

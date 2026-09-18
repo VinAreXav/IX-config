@@ -31,25 +31,15 @@ hl.window_rule({
 		opaque = true,
 		workspace = "name:empty",
 })
-hl.window_rule ({
-		name = "ref",
-		match = {
-				class = "PureRef"
-		},
-		float = true,
-		opaque = true,
-		pin = true,
-		move = {260, 600}, 
----		size = {400, 400}
-})
+
 hl.window_rule({
 		name = "blur",
 		match = {
-				focus = true,
+				focus = false,
 		},
-		no_blur = true,
-
+		no_blur = false,
 })
+
 hl.window_rule ({
 		name = "nsxiv",
 		match = {
@@ -65,11 +55,9 @@ hl.window_rule ({
 hl.window_rule ({
 		name = "obsidian",
 		match = {
-				class = "electron",
-				initial_title = "bale - Obsidian 1.12.7"
+				class = "obsidian",
 		},
 		opaque = true,
-		pseudo = true,
 })
 hl.window_rule ({
 				name = "set_fullscreen",
@@ -81,24 +69,24 @@ hl.window_rule ({
 				fullscreen = true,
 				workspace = "special:trinkets",
 })
-hl.window_rule ({
-				name = "quick access",
-				match = {
-						class = "clipstudiopaint.exe",
-						title = "Quick Access"
-				},
-				opaque = true,
-				pin = true,
-				float = true
-})
 
+hl.window_rule({
+		name = "csp 2",
+		match = {
+				class = "clipstudiopaint.exe",
+				title = "CLIP STUDIO PAINT",
+		},
+		opaque = true,
+})
 hl.window_rule({
 		name = "csp",
 		match = {
 				class = "clipstudiopaint.exe",
+				title = "Sub View",
 		},
 		opaque = true,
 })
+
 
 hl.window_rule({
 		name = "time-stuff",

@@ -5,8 +5,6 @@ EnumerateWithTriggerKeys=True
 EnumerateBackwardKeys=
 # Skip first input method while enumerating
 EnumerateSkipFirst=False
-# Enumerate Input Method Group Forward
-EnumerateGroupForwardKeys=
 # Time limit in milliseconds for triggering modifier key shortcuts
 ModifierOnlyKeyTimeout=250
 
@@ -25,6 +23,9 @@ ModifierOnlyKeyTimeout=250
 
 [Hotkey/EnumerateForwardKeys]
 0=Super+Tab
+
+[Hotkey/EnumerateGroupForwardKeys]
+0=Super+grave
 
 [Hotkey/EnumerateGroupBackwardKeys]
 0=Shift+Super+space

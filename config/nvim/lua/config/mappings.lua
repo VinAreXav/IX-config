@@ -40,9 +40,9 @@ map("n", "<C-l>", "<C-w>l")
 -- fzf and grep
 map("n", "<leader>f", ":lua require('fzf-lua').files()<CR>") --search cwd
 map("n", "<leader>Fh", ":lua require('fzf-lua').files({ cwd = '~/' })<CR>") --search home
-map("n", "<leader>Fl", ":lua require('fzf-lua').files({ cwd = '/lien' })<CR>")
-map("n", "<leader>Fm", ":lua require('fzf-lua').files({ cwd = '/lien/Desktop/meow' })<CR>") 
-map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/.config' })<CR>") --search .config
+map("n", "<leader>FD", ":lua require('fzf-lua').files({ cwd = '~/Desktop' })<CR>")
+map("n", "<leader>Fd", ":lua require('fzf-lua').files({ cwd = '~/Downloads' })<CR>") 
+map("n", "<leader>Fc", ":lua require('fzf-lua').files({ cwd = '~/IX-config' })<CR>") --search .config
 map("n", "<leader>Ff", ":lua require('fzf-lua').files({ cwd = '..' })<CR>") --search above
 map("n", "<leader>Fr", ":lua require('fzf-lua').resume()<CR>") --last search
 
@@ -52,7 +52,7 @@ map("n", "<leader>G", ":lua require('fzf-lua').grep_cword()<CR>") --grep word un
 -- misc
 map("n", "<leader>s", ":%s//g<Left><Left>") --replace all		Q		
 map("n", "<leader>p", switch_theme) --cycle themes
-map("n", "<leader>P", ":Lazy<CR>") --vim-plug
+map("n", "<leader>L", ":Lazy<CR>") --vim-plug
 map('n', '<leader>z', ":lua require('FTerm').open()<CR>") --open term
 map('t', '<Esc>', '<C-\\><C-n><CMD>lua require("FTerm").close()<CR>') --preserves session
 map("n", "<leader>w", ":w<CR>") --write but one less key
@@ -72,9 +72,6 @@ map("n", "[c", ":lua require('decisive').align_csv_prev_col()<cr>")
 map("n", "]c", ":lua require('decisive').align_csv_next_col()<cr>")
 map("n", "<leader>nm", ":lua require('dapui').toggle()<cr>")
 
-map("n", "<leader>H", function() --toggle htop in term
-    _G.htop:toggle()
-end)
 
 
 map("n", "<leader>ma", function() --quick make in dir of buffer

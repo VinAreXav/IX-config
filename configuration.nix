@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -101,6 +101,7 @@
   input-remapper
 	wget
 	swaybg
+	awww
 	nemo
 	wl-clipboard
 	wayland-utils
@@ -163,10 +164,6 @@
 	openutau
 	librewolf-bin
 	wpgtk
-	gst_all_1.gst-plugins-bad
-	gst_all_1.gst-plugins-good
-	gst_all_1.gst-plugins-ugly
-	gst_all_1.gst-plugins-base
 ];
   fonts = {
     fontconfig.enable = true;
@@ -190,15 +187,20 @@
 		enable = true;
 		withUWSM = true;
 		xwayland.enable = true;
-#		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-#		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-
+		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 	};
+
 	zsh.enable = true;
 	rog-control-center.enable = true;
 	steam.enable = true;
 	mtr.enable = true;
-	nix-ld.enable = true;
+	nix-ld = {
+			enable = true;
+			libraries = with pkgs; [
+					expat
+			];
+	};
 	dconf.enable = true;
   	#firefox.enable = true;
   };

@@ -1,15 +1,10 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
-        gaps_in  = 5,
-		gaps_out = 5,
+        gaps_in  = 0,
+		gaps_out = 0,
 
-        border_size = 0,
-
-        col = {
-            active_border   = { colors = {"rgba(33ccffee)", "rgba(00ff99ee)"}, angle = 45 },
-            inactive_border = "rgba(595959aa)",
-        },
+        border_size = 2,
 
         resize_on_border = false,
         allow_tearing = false,
@@ -18,27 +13,31 @@ hl.config({
     },
 
     decoration = {
-        rounding       = 10,
-        rounding_power = 2,
+        rounding       = 0,
+        rounding_power = 0,
 
-        active_opacity   = 0.87,
-        inactive_opacity = 0.40,
+        active_opacity   = 0.90,
+        inactive_opacity = 0.60,
 
         shadow = {
             enabled      = true,
-            range        = 5,
-            render_power = 14,
+            range        = 300,
+            render_power = 10,
             color        = 0xee1a1a1a,
         },
 
         blur = {
-            enabled   = true,
+            enabled   = false,
             size      = 5,
             passes    = 1,
             vibrancy  = 5,
 			ignore_opacity = true,
 			new_optimizations = true,
-			xray = false
+			xray = false,
+			variant = drops,
+			drops = {
+					speed = 7.0
+			},
         },
     },
 
