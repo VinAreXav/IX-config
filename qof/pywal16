@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 back="$(cat $HOME/IX-config/config/matugen/eDP-1.txt)"
 
-matugen image -t scheme-fidelity --source-color-index 0 -m dark --contrast -1 -r gaussian -v "$back" &  
+matugen image -t scheme-smart --prefer less-saturation  -m dark --contrast -1 -r gaussian -v "$back" &  
 
 awww img --transition-type wipe --transition-duration 1.0 --filter CatmullRom --transition-fps 78 --transition-angle 180 --transition-bezier .97,.03,.02,.98 -o "eDP-1" "$back"
 

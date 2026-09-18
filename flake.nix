@@ -1,7 +1,7 @@
 {
 	description = "Trying again again again";
 	inputs = {
-		nixpkgs.url = "nixpkgs/nixos-unstable";
+		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -13,17 +13,17 @@
 		matugen = {
 			url = "github:/InioX/Matugen";
 		};
-		quickshell = {
-			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+#		quickshell = {
+#			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+#			inputs.nixpkgs.follows = "nixpkgs";
+#		};
 		hyprland = {
 				url = "github:hyprwm/Hyprland";
 				inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
 
-	outputs = { self, nixpkgs, home-manager, aagl, matugen, quickshell, hyprland, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, aagl, matugen, hyprland, ... }@inputs:
 		let
 		username = "xavier";
 		system = "x86_64-linux";

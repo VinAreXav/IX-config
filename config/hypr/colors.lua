@@ -35,9 +35,9 @@ hl.config({
 			new_optimizations = true,
 			xray = false,
 			variant = drops,
-			drops = {
-					speed = 7.0
-			},
+			--drops = {
+			--		speed = 7.0
+			--},
         },
     },
 
