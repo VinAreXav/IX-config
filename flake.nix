@@ -17,13 +17,10 @@
 #			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
 #			inputs.nixpkgs.follows = "nixpkgs";
 #		};
-		hyprland = {
-				url = "github:hyprwm/Hyprland";
-				inputs.nixpkgs.follows = "nixpkgs";
-		};
+
 	};
 
-	outputs = { self, nixpkgs, home-manager, aagl, matugen, hyprland, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, aagl, matugen, ... }@inputs:
 		let
 		username = "xavier";
 		system = "x86_64-linux";

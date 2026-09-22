@@ -1,10 +1,11 @@
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
+require("borders")
 hl.config({
     general = {
         gaps_in  = 0,
 		gaps_out = 0,
 
-        border_size = 2,
+        border_size = 0,
 
         resize_on_border = false,
         allow_tearing = false,
@@ -18,29 +19,37 @@ hl.config({
 
         active_opacity   = 0.90,
         inactive_opacity = 0.60,
-
-        shadow = {
-            enabled      = true,
-            range        = 300,
-            render_power = 10,
-            color        = 0xee1a1a1a,
-        },
+		dim_inactive = true,
+		dim_strength = 0.2,
+		dim_modal = true,
 
         blur = {
-            enabled   = false,
-            size      = 5,
+            enabled   = true,
+            size      = 7,
             passes    = 1,
-            vibrancy  = 5,
+			noise = 0.2,
+            vibrancy  = -10,
+			vibrancy_darkness = 0.6,
+			special = true,
 			ignore_opacity = true,
 			new_optimizations = true,
-			xray = false,
+			popups = true,
+			xray = true,
 			variant = drops,
-			--drops = {
-			--		speed = 7.0
-			--},
-        },
+		},
+		shadow = {
+				enabled	= false,
+				range	= 500,
+				render_power = 4,
+				scale = 1,
+		},
+		glow = {
+				enabled = true,
+				range = 30,
+				render_power = 2,
+				color_inactive = "0xFF",
+		},
     },
-
     animations = {
         enabled = true,
     },

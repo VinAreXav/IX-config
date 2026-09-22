@@ -35,9 +35,9 @@ hl.window_rule({
 hl.window_rule({
 		name = "blur",
 		match = {
-				focus = false,
+				focus = true,
 		},
-		no_blur = false,
+		no_blur = true,
 })
 
 hl.window_rule ({

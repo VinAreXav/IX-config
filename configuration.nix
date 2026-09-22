@@ -164,7 +164,6 @@
 	openutau
 	librewolf-bin
 	wpgtk
-	hyprutils
 ];
   fonts = {
     fontconfig.enable = true;
@@ -178,6 +177,11 @@
   };
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
+  
+  xdg.portal = {
+		enable = true;
+#		extraPortals = [ inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland ];
+  };
 
   programs = {
 	gnupg.agent = {
@@ -191,17 +195,13 @@
 #		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 #		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 	};
-
+	
 	zsh.enable = true;
 	rog-control-center.enable = true;
 	steam.enable = true;
 	mtr.enable = true;
-	nix-ld = {
-			enable = true;
-			libraries = with pkgs; [
-					expat
-			];
-	};
+	nix-ld.enable = true;
+			
 	dconf.enable = true;
   	#firefox.enable = true;
   };
@@ -214,7 +214,13 @@
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.
   # system.copySystemConfiguration = true;
-
+  nix = {
+		settings = {
+#substituters = ["https://hyprland.cachix.org"];
+#trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+				max-jobs = 8;
+		};
+  };
   system.stateVersion = "26.05"; 
 }
 

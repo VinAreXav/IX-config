@@ -48,9 +48,8 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 
 hl.bind(mainMod .. " + Q",	hl.dsp.workspace.toggle_special("trinkets"))
 hl.bind(mainMod .. " + E",	hl.dsp.workspace.toggle_special("special"))
-hl.bind(mainMod .. " + SHIFT + Q",	hl.dsp.window.move({ workspace = "special:special" }))
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.window.move({ workspace = "special:trinkets"}))
-
+hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.move({ workspace = "special:trinkets"}))
+hl.bind(mainMod .. " + SHIFT + E",	hl.dsp.window.move({ workspace = "special:special" }))
 
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
