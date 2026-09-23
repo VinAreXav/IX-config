@@ -20,20 +20,21 @@
   time.timeZone = "Asia/Bishkek";
 
   i18n = {
-     defaultLocale = "en_US.UTF-8";
-     inputMethod = {
-     	enable = true;
-    	type = "fcitx5";
-   	fcitx5 = {
+		defaultLocale = "en_US.UTF-8";
+		inputMethod = {
+				enable = true;
+				type = "fcitx5";
+		fcitx5 = {
       		waylandFrontend = true;
-      		ignoreUserConfig = false;  
-	  	addons = with pkgs; [
+      		ignoreUserConfig = false;
+			addons = with pkgs; [
         		fcitx5-mozc-ut
-			fcitx5-hangul	
-		];
-  	};
+				fcitx5-hangul	
+				];
+		};
+};
+	
    };
-  };
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -97,6 +98,10 @@
 
 
   environment.localBinInPath = true;
+  environment.sessionVariables = {
+  XCURSOR_THEME = "Braun_Cursor";
+  XCURSOR_SIZE = "26";
+};
   environment.systemPackages = with pkgs; [
   input-remapper
 	wget
@@ -166,6 +171,9 @@
 	wpgtk
 	clickgen
 	xcursorgen
+	gst_all_1.gstreamer
+	gst_all_1.gst-plugins-bad
+	gst_all_1.gst-plugins-good
 	inputs.ani2xcursor.packages.${pkgs.system}.default
 	win2xcur
 ];
@@ -184,9 +192,7 @@
   
   xdg.portal = {
 		enable = true;
-		config = {
-				hyprland.preferred = [ "hyprland" "gtk" ];
-		};
+		configPackages = [ pkgs.hyprland ];	
 		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 #		extraPortals = [ inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland ];
   };
@@ -203,13 +209,20 @@
 #		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 #		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 	};
-	
+    niri = {
+			enable = true;
+	};	
 	zsh.enable = true;
 	rog-control-center.enable = true;
 	steam.enable = true;
 	mtr.enable = true;
-	nix-ld.enable = true;
-			
+	nix-ld = {
+			enable = true;
+			libraries = with pkgs; [
+				libxcb-cursor
+				libxcursor
+			];
+	};
 	dconf.enable = true;
   	#firefox.enable = true;
   };

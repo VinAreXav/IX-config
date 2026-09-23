@@ -12,24 +12,31 @@ input {
     touchpad {
 		//	dwt
 		tap
-		accel-speed 0.0
+		accel-speed 1.0
         accel-profile "flat"
 		scroll-method "two-finger"
 		middle-emulation
 		natural-scroll
     }
 	mouse {
-			accel-speed 0.0
+			accel-speed 0.2
 			accel-profile "flat"
 			middle-emulation
 	}
-//	warp-mouse-to-focus mode="center-xy"
+	warp-mouse-to-focus mode="center-xy"
 	focus-follows-mouse max-scroll-amount="10%"
 	workspace-auto-back-and-forth
 }
 // ────────────── Output Configuration ──────────────
+
 output "BOE NE160WUM-NX2 Unknown" {
     mode "1920x1200@165.015"
+    scale 1
+    transform "normal"
+}
+
+output "PNP(HAT) Kamvas 22 0x01010101" {
+    mode "1920x1080@60"
     scale 1
     transform "normal"
 	focus-at-startup

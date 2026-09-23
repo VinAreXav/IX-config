@@ -1,9 +1,9 @@
 // ────────────── Layout Settings ──────────────
 layout {
-        gaps 10 
+        gaps 0
 		center-focused-column "on-overflow"
-		background-color "transparent"
 		always-center-single-column
+		background-color "transparent"
 
 		default-column-width { proportion 0.5; }
         
@@ -26,10 +26,11 @@ layout {
 				inactive-color "#505050"
         }
 		border {
-				width 2
+				off
+				width 5
 				active-color "#ffc87f"
-				inactive-color "#505050"
-				urgent-color "#9b0000"
+				inactive-color "transparent"
+				urgent-color "transparent"
 		}
         shadow {
 				draw-behind-window true
