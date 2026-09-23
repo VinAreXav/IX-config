@@ -80,9 +80,10 @@ cursorTheme = pkgs.stdenvNoCC.mkDerivation {
 };
 
 home.pointerCursor = {
+		enable = true;
 		name = "Braun_Cursor";
 		package = cursorTheme; 
-		size = 26;
+		size = 24;
 		gtk.enable = true;
 		hyprcursor.enable = true;
     };

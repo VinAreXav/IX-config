@@ -98,9 +98,10 @@
 
 
   environment.localBinInPath = true;
+  
   environment.sessionVariables = {
   XCURSOR_THEME = "Braun_Cursor";
-  XCURSOR_SIZE = "26";
+  XCURSOR_SIZE = "24";
 };
   environment.systemPackages = with pkgs; [
   input-remapper
