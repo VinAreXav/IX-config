@@ -164,6 +164,10 @@
 	openutau
 	librewolf-bin
 	wpgtk
+	clickgen
+	xcursorgen
+	inputs.ani2xcursor.packages.${pkgs.system}.default
+	win2xcur
 ];
   fonts = {
     fontconfig.enable = true;
@@ -180,6 +184,10 @@
   
   xdg.portal = {
 		enable = true;
+		config = {
+				hyprland.preferred = [ "hyprland" "gtk" ];
+		};
+		extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 #		extraPortals = [ inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland ];
   };
 

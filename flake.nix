@@ -17,10 +17,10 @@
 #			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
 #			inputs.nixpkgs.follows = "nixpkgs";
 #		};
-
+		ani2xcursor.url = "github:yuzujr/ani2xcursor";
 	};
 
-	outputs = { self, nixpkgs, home-manager, aagl, matugen, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, aagl, matugen, ani2xcursor, ... }@inputs:
 		let
 		username = "xavier";
 		system = "x86_64-linux";

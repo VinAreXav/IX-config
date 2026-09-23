@@ -47,9 +47,8 @@ let
 
  gtk = {
 	enable = true;
-	cursorTheme.package = pkgs.catppuccin-cursors.latteDark;
-	cursorTheme.name = "Catpuccin Latte Dark Cursor";
-	theme.name = "Arc Theme";
+	cursorTheme.name = "Braun";
+	theme.name = "Arc-Darker";
 	theme.package = pkgs.arc-theme;
 #	iconTheme.name = "Catpuccin ";
 #	iconTheme.package = pkgs.catppuccin-papirus-folders;
