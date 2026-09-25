@@ -44,13 +44,13 @@
 						backupFileExtension = "backup";
 					};
 				}
-				{
-					imports = [ aagl.nixosModules.default ];
-					nix.settings = aagl.nixConfig;
-					programs.anime-game-launcher.enable = true;
-					programs.sleepy-launcher.enable = true;
-					programs.honkers-railway-launcher.enable = true;
-				}
+#				{
+#					imports = [ aagl.nixosModules.default ];
+#					nix.settings = aagl.nixConfig;
+#					programs.anime-game-launcher.enable = true;
+#					programs.sleepy-launcher.enable = true;
+#					programs.honkers-railway-launcher.enable = true;
+#				}
 				{
 					environment.systemPackages = [
 					matugen.packages.${system}.default

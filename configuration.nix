@@ -1,5 +1,22 @@
 { config, lib, pkgs, inputs, ... }:
 
+let
+
+sddm-astronaut = (pkgs.sddm-astronaut.override {
+		embeddedTheme = "pixel_sakura";
+		themeConfig = {
+				Background = "Backgrounds/void.jpg";		
+				};
+		}).overrideAttrs (oldAttrs: {
+				installPhase = oldAttrs.installPhase + ''
+						chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+						cp ${./nixos/sddm/void.jpg} \
+						$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/void.jpg
+				'';
+		});
+
+in
+
 {
   imports =
     [      ./hardware-configuration.nix
@@ -59,7 +76,7 @@
     	};
   };
   services = {
-  	input-remapper.enable = true;
+    input-remapper.enable = true;
   	udisks2.enable = true;
 	printing.enable = true;
 	libinput.enable = true;
@@ -68,11 +85,15 @@
   	openssh.enable = true;
   	asusd.enable = true;
   	flatpak.enable = true;
+
 	displayManager.sddm = {
 		enable = true;	
 		wayland.enable = true;
 		theme = "sddm-astronaut-theme";
-		extraPackages = [ pkgs.sddm-astronaut ];
+		package = pkgs.kdePackages.sddm;
+		extraPackages = with pkgs;[ 
+				kdePackages.qtmultimedia
+		];
 	};
 	xserver = {
   		enable = true;
@@ -171,13 +192,17 @@
 	openutau
 	librewolf-bin
 	wpgtk
+	
+	win2xcur
 	clickgen
 	xcursorgen
+	inputs.ani2xcursor.packages.${pkgs.system}.default
+
 	gst_all_1.gstreamer
 	gst_all_1.gst-plugins-bad
 	gst_all_1.gst-plugins-good
-	inputs.ani2xcursor.packages.${pkgs.system}.default
-	win2xcur
+
+	sddm-astronaut
 ];
   fonts = {
     fontconfig.enable = true;
@@ -211,13 +236,11 @@
 #		package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
 #		portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
 	};
-    niri = {
-			enable = true;
-	};	
 	zsh.enable = true;
 	rog-control-center.enable = true;
 	steam.enable = true;
 	mtr.enable = true;
+
 	nix-ld = {
 			enable = true;
 			libraries = with pkgs; [
@@ -226,8 +249,8 @@
 			];
 	};
 	dconf.enable = true;
-  	#firefox.enable = true;
   };
+
    #virtualisation.virtualbox.host.enable = true;
    #users.extraGroups.vboxusers.members = [ "xavier" ];
    #virtualisation.virtualbox.host.enableExtensionPack = true;

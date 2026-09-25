@@ -87,6 +87,13 @@ hl.window_rule({
 		opaque = true,
 })
 
+hl.window_rule({
+		name = "browser in the special workspace",
+		match = {
+				class = "obsidian",
+		},
+		tile = true,
+})
 
 hl.window_rule({
 		name = "time-stuff",

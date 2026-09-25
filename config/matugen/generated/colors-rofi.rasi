@@ -1,23 +1,23 @@
 * {
-		base00: #4d3339;
-		base01: #443739;
-		base02: #b28960;
-		base03: #c77a8d;
+		base00: #3d3556;
+		base01: #393944;
+		base02: #a286b9;
+		base03: #7a85ff;
 
-		base04: #b56b7d;
-		base05: #443739;
-		base06: #c79c72; 
-		base07: #97693c;		
-		base08: #514346;
-		base09: #bf9ba2;
-		base0A: #b28960;
-		base0B: #443739CC;
- 		base0C: #907f82;
-		base0D: #97693c;
-		base0E: #612638;
-		base0F: #ab888f;
-		back: #523312CC;
-		selected: #612638CC;
+		base04: #6471ff;
+		base05: #393944;
+		base06: #b699cd; 
+		base07: #8555ab;		
+		base08: #464651;
+		base09: #a89fc5;
+		base0A: #a286b9;
+		base0B: #393944CC;
+ 		base0C: #82828f;
+		base0D: #8555ab;
+		base0E: #0011c0;
+		base0F: #958bb1;
+		back: #48305dCC;
+		selected: #0011c0CC;
 		spacing: 0;
 		background-color: transparent;
 }
