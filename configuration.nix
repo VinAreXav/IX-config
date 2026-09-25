@@ -32,9 +32,9 @@
 				fcitx5-hangul	
 				];
 		};
+    };
 };
-	
-   };
+
   # console = {
   #   font = "Lat2-Terminus16";
   #   keyMap = "us";
@@ -103,6 +103,7 @@
   XCURSOR_THEME = "Braun_Cursor";
   XCURSOR_SIZE = "24";
 };
+
   environment.systemPackages = with pkgs; [
   input-remapper
 	wget
