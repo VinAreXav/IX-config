@@ -15,10 +15,10 @@ hl.config({
 
     decoration = {
         rounding       = 0,
-        rounding_power = 0,
+        rounding_power = 1.0,
 
-        active_opacity   = 0.90,
-        inactive_opacity = 0.60,
+        active_opacity   = 0.95,
+        inactive_opacity = 0.90,
 		dim_inactive = true,
 		dim_strength = 0.2,
 		dim_modal = true,
@@ -28,7 +28,7 @@ hl.config({
             size      = 7,
             passes    = 1,
 			noise = 0.2,
-            vibrancy  = -10,
+--            vibrancy  = -10,
 			vibrancy_darkness = 0.6,
 			special = true,
 			ignore_opacity = true,
@@ -39,12 +39,12 @@ hl.config({
 		},
 		shadow = {
 				enabled	= false,
-				range	= 500,
+				-- range	= 500,
 				render_power = 4,
 				scale = 1,
 		},
 		glow = {
-				enabled = true,
+				enabled = false,
 				range = 25,
 				render_power = 2,
 				color_inactive = "0xFF",
