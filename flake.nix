@@ -10,27 +10,23 @@
 			url = "github:ezKEa/aagl-gtk-on-nix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		matugen = {
-			url = "github:/InioX/Matugen";
-		};
 #		quickshell = {
 #			url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
 #			inputs.nixpkgs.follows = "nixpkgs";
 #		};
-		ani2xcursor.url = "github:yuzujr/ani2xcursor";
 	};
 
-	outputs = { self, nixpkgs, home-manager, aagl, matugen, ani2xcursor, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, aagl,  ... }@inputs:
 		let
-		username = "xavier";
+		username = "mumu";
 		system = "x86_64-linux";
 		lib = nixpkgs.lib;
 		in
 	{
-		nixosConfigurations.absurd = nixpkgs.lib.nixosSystem {
+		nixosConfigurations.nagasono = nixpkgs.lib.nixosSystem {
 			inherit system;
 			specialArgs = {
-				host = "absurd";
+				host = "nagasono";
 				inherit self inputs username;
 			};
 			modules = [
@@ -40,21 +36,16 @@
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.xavier = import ./home.nix;
+						users.mumu = import ./home.nix;
 						backupFileExtension = "backup";
 					};
 				}
-#				{
-#					imports = [ aagl.nixosModules.default ];
-#					nix.settings = aagl.nixConfig;
-#					programs.anime-game-launcher.enable = true;
-#					programs.sleepy-launcher.enable = true;
-#					programs.honkers-railway-launcher.enable = true;
-#				}
 				{
-					environment.systemPackages = [
-					matugen.packages.${system}.default
-					];
+					imports = [ aagl.nixosModules.default ];
+					nix.settings = aagl.nixConfig;
+					programs.anime-game-launcher.enable = true;
+					programs.sleepy-launcher.enable = true;
+					programs.honkers-railway-launcher.enable = true;
 				}
 			];
 		};

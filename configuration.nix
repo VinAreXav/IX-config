@@ -5,14 +5,14 @@ let
 sddm-astronaut = (pkgs.sddm-astronaut.override {
 		embeddedTheme = "pixel_sakura";
 		themeConfig = {
-				Background = "Backgrounds/void.jpg";		
-				};
+			Background = "Backgrounds/void.jpg";		
+			};
 		}).overrideAttrs (oldAttrs: {
-				installPhase = oldAttrs.installPhase + ''
-						chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
-						cp ${./nixos/sddm/void.jpg} \
-						$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/void.jpg
-				'';
+			installPhase = oldAttrs.installPhase + ''
+			chmod u+w $out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/
+			cp ${./nixos/sddm/void.jpg} \
+			$out/share/sddm/themes/sddm-astronaut-theme/Backgrounds/void.jpg
+			'';
 		});
 
 in
@@ -27,7 +27,7 @@ in
   boot.kernelModules = [ "uinput" ];
   
   networking = {
-  	hostName = "absurd";
+  	hostName = "nagasono";
   	networkmanager.enable = true;
   	firewall = {
   		enable = true;
@@ -46,8 +46,8 @@ in
       		ignoreUserConfig = false;
 			addons = with pkgs; [
         		fcitx5-mozc-ut
-				fcitx5-hangul	
-				];
+			fcitx5-hangul	
+			];
 		};
     };
 };
@@ -78,7 +78,6 @@ in
   services = {
     input-remapper.enable = true;
   	udisks2.enable = true;
-	printing.enable = true;
 	libinput.enable = true;
 	blueman.enable = true;
   	upower.enable = true;
@@ -92,7 +91,8 @@ in
 		theme = "sddm-astronaut-theme";
 		package = pkgs.kdePackages.sddm;
 		extraPackages = with pkgs;[ 
-				kdePackages.qtmultimedia
+			kdePackages.qtmultimedia
+			sddm-astronaut
 		];
 	};
 	xserver = {
@@ -108,7 +108,7 @@ in
    	};
   };
 
-  users.users.xavier = {
+  users.users.mumu = {
      isNormalUser = true;
      extraGroups = [ "wheel" "input" ]; 
      packages = with pkgs; [
@@ -130,6 +130,7 @@ in
 	wget
 	swaybg
 	awww
+	flavours
 	nemo
 	wl-clipboard
 	wayland-utils
@@ -140,64 +141,38 @@ in
 	gh
 	krita-unwrapped
 	mpv
-	ruff
 	yt-dlp
-	blender
-	anki-bin
-	ankiAddons.anki-connect
-	ankiAddons.review-heatmap
 	file-roller
 	p7zip
-	unzip
 	gnutar
-	fastfetch
-	psmisc
 	python315
 	glib
-	kdePackages.polkit-kde-agent-1
 	pavucontrol
-	inkscape
-	libreoffice
+#	inkscape
+#	libreoffice
 	wine64Packages.stagingFull
 	(bottles.override { removeWarningPopup = true; })
 	winetricks
 	brightnessctl
 	ayugram-desktop
-	file
 	freetube
-	dex
-	heroic
 	protonplus
 	protontricks
 	gcc
+
 	scriptisto
+
 	lazygit
-	cargo
-	clippy
-	peaclock
-	sunsetr
 	zathura
-	qutebrowser
 	lua5_4_compat
-	htop
 	obs-studio
 #pureref
 	jq
-	chameleos
-	pciutils
 	libnotify
-	figma-linux
-	nix-prefetch
 	nsxiv
 	openutau
 	librewolf-bin
-	wpgtk
 	
-	win2xcur
-	clickgen
-	xcursorgen
-	inputs.ani2xcursor.packages.${pkgs.system}.default
-
 	gst_all_1.gstreamer
 	gst_all_1.gst-plugins-bad
 	gst_all_1.gst-plugins-good
@@ -242,20 +217,18 @@ in
 	mtr.enable = true;
 
 	nix-ld = {
-			enable = true;
-			libraries = with pkgs; [
-				libxcb-cursor
-				libxcursor
-			];
+		enable = true;
+		libraries = with pkgs; [
+		];
 	};
 	dconf.enable = true;
   };
 
-   #virtualisation.virtualbox.host.enable = true;
-   #users.extraGroups.vboxusers.members = [ "xavier" ];
-   #virtualisation.virtualbox.host.enableExtensionPack = true;
-   #virtualisation.virtualbox.guest.enable = true;
-   #virtualisation.virtualbox.guest.dragAndDrop = true;
+   virtualisation.virtualbox.host.enable = true;
+   users.extraGroups.vboxusers.members = [ "mumu" ];
+   virtualisation.virtualbox.host.enableExtensionPack = true;
+   virtualisation.virtualbox.guest.enable = true;
+   virtualisation.virtualbox.guest.dragAndDrop = true;
 
   # (/run/current-system/configuration.nix). This is useful in case you
   # accidentally delete configuration.nix.

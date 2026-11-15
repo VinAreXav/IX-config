@@ -5,17 +5,11 @@ let
  configs = {
 		 nvim = "nvim";
 		 nsxiv = "nsxiv";
-		 qutebrowser = "qutebrowser";
 		 kitty = "kitty";
 		 matugen = "matugen";
-		 niri = "niri";
-		 quickshell = "quickshell";
 		 rofi = "rofi";
 		 OpenTabletDriver = "OpenTabletDriver";
 		 hypr = "hypr";
-		 fastfetch = "fastfetch";
-		 rog = "rog";
-		 sunsetr = "sunsetr";
 		 fcitx5 = "fcitx5";
 		 swaync = "swaync";
  };
@@ -34,9 +28,9 @@ cursorTheme = pkgs.stdenvNoCC.mkDerivation {
  in
 
 {
-	home.username = "xavier";
-	home.homeDirectory = "/home/xavier";
-	home.stateVersion = "26.05";
+	home.username = "mumu";
+	home.homeDirectory = "/home/mumu";
+	home.stateVersion = "26.11";
 	programs.zsh = {
 		enable = true;
 		shellAliases = {
@@ -57,10 +51,10 @@ cursorTheme = pkgs.stdenvNoCC.mkDerivation {
 
  gtk = {
 	enable = true;
-	theme = {
-		name = "Arc-Darker";
-		package = pkgs.arc-theme;
-	};
+#	theme = {
+#		name = "Arc-Darker";
+#		package = pkgs.arc-theme;
+#	};
 	cursorTheme = {
 		name = "Braun_Cursor";
 		package = cursorTheme;
