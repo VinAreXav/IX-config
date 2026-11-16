@@ -4,16 +4,16 @@ SDDM=/home/xavier/Desktop/conesque/sddm/wal.jpg
 CACHE_SDDM=/home/xavier/Desktop/meow/colors/qml-sddm.py
 WAL_SDDM=/home/xavier/Desktop/meow/colors/update-background
 
-UPDATE='$HOME'/IX-config/qof/pywal16
+UPDATE=$HOME/IX-config/qof/pywal16
 [ "$NSXIV_USING_NULL" = 1 ] && DELIM='\0' || DELIM='\n'
 
 while read file
 do
 	case "$1" in
-		"e") echo "$file" > '$HOME'/IX-config/config/matugen/HDMI-A-3.txt
+		"e") echo "$file" > $HOME/IX-config/config/matugen/HDMI-A-3.txt
 		awww img --transition-type wipe --transition-duration 1.0 --filter CatmullRom --transition-fps 78 --transition-angle 180 --transition-bezier .97,.03,.02,.98 -o "HDMI-A-3" "$file"
 			;;
-		"w") echo "$file" > '$HOME'/IX-config/config/matugen/eDP-1.txt
+		"w") echo "$file" > $HOME/IX-config/config/matugen/eDP-1.txt
 		$UPDATE &
 
 ### 	/home/xavier/IX-config/qof/oomox-gtk & 
