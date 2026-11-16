@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 back="$(cat $HOME/IX-config/config/matugen/eDP-1.txt)"
 
-matugen image -t scheme-smart --prefer darkness  -m dark --contrast -1 -r gaussian -v "$back" &  
-
 awww img --transition-type wipe --transition-duration 1.0 --filter CatmullRom --transition-fps 78 --transition-angle 180 --transition-bezier .97,.03,.02,.98 -o "eDP-1" "$back"
 
 while [ ! -f ~/.cache/wal/krita.colors ]; do
