@@ -1,6 +1,7 @@
 --- applications ---
 
 global terminal    = "kitty"
+global editor = "kitty -e nvim"
 global clock 	   = "kitty -e peaclock"
 global menu        = "rofi -modi 'drun,ssh' -show drun"
 global fileManager = "nemo"

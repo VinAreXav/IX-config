@@ -11,6 +11,7 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu),{repeating = false})
 
 -- scripts
 hl.bind(mainMod .. "+ I", hl.dsp.exec_cmd(walmenu))
+hl.bind(mainMod .. "+ E", hl.dsp.exec_cmd(editor))
 
 -- system applications
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
@@ -22,11 +23,12 @@ local closeWindowBind = hl.bind(mainMod .. " + X", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + O", hl.dsp.window.set_prop({ prop = "opaque", value = "toggle", window = "active"}))
 
+--window manipulation
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pin({ action = "toggle" }))
-hl.bind(mainMod .. " + U", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + M", hl.dsp.layout("togglesplit"))
 
+--movements
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
