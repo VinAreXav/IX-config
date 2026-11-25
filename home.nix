@@ -12,6 +12,7 @@ let
 		 hypr = "hypr";
 		 fcitx5 = "fcitx5";
 		 swaync = "swaync";
+		 qutebrowser = "qutebrowser";
  };
 cursorTheme = pkgs.stdenvNoCC.mkDerivation {
 		pname = "Braun_Cursor";
@@ -90,8 +91,8 @@ programs.git = {
         	email = "ruiruikurushi@gmail.com";
       		};
 		credential.helper = "${
-          		pkgs.git.override { withLibsecret = true; }
-        		}/bin/git-credential-libsecret";
+         		pkgs.git.override { withLibsecret = true; }
+		}/bin/git-credential-libsecret";
 
 		init.defaultBranch = "main";
 	};

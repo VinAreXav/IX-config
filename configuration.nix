@@ -23,6 +23,7 @@ in
     ];
 
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.graceful = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.kernelModules = [ "uinput" ];
   
@@ -142,15 +143,19 @@ in
 	krita-unwrapped
 	mpv
 	yt-dlp
-	file-roller
+	killall 
+#	file-roller
 	p7zip
 	gnutar
-	python315
+	qutebrowser
 	glib
 	pavucontrol
 #	inkscape
 #	libreoffice
-	wine64Packages.stagingFull
+#	wine64Packages.stagingFull
+	(winePackages.wayland.override { wineBuild = "wine64"; })
+#	wineWow64Packages.yabridge
+	notion-electron
 	(bottles.override { removeWarningPopup = true; })
 	winetricks
 	brightnessctl
@@ -159,6 +164,8 @@ in
 	protonplus
 	protontricks
 	gcc
+
+	sqlite
 
 	scriptisto
 
